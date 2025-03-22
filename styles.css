@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   margin: 0;
@@ -16,10 +17,14 @@
   --light-gray: #e9dae8;
   --gray: #6f6c6f;
   --section: #faf8fc;
-  --linear-gradient: linear-gradient(270deg,
-      rgba(234, 82, 130, 1) 0%,
-      rgba(87, 28, 180, 1) 100%);
+  --linear-gradient: linear-gradient(
+    270deg,
+    rgba(234, 82, 130, 1) 0%,
+    rgba(87, 28, 180, 1) 100%
+  );
   --linear-gradient-background: rgb(234, 82, 130);
+  --text-black: #020f14b2;
+  --purple: #7b4cc4;
 }
 
 html,
@@ -27,7 +32,7 @@ body {
   height: 100%;
 }
 
-body {
+html {
   font-size: 14px;
 }
 
@@ -42,6 +47,7 @@ a,
 span {
   font-size: 1rem;
   font-weight: 400;
+  color: var(--text-black);
 }
 
 /* h1: 5.143rem = 5.143 * 14 = 72px */
@@ -78,5 +84,8 @@ h4 {
 .container {
   max-width: 1296px;
   margin: 0 auto;
-  padding: 0 20px;
+}
+
+.section {
+  width: 100%;
 }
