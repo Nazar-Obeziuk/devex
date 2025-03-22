@@ -16,6 +16,7 @@
   --light-gray: #e9dae8;
   --gray: #6f6c6f;
   --section: #faf8fc;
+  --primary-head: #2F1656;
   --linear-gradient: linear-gradient(270deg,
       rgba(234, 82, 130, 1) 0%,
       rgba(87, 28, 180, 1) 100%);
@@ -27,7 +28,7 @@ body {
   height: 100%;
 }
 
-body {
+html {
   font-size: 14px;
 }
 
@@ -78,5 +79,29 @@ h4 {
 .container {
   max-width: 1296px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px;
+}
+
+@media (max-width: 1296px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 576px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
 }

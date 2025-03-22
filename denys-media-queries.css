@@ -1,7 +1,118 @@
 @media (max-width: 1296px) {}
 
-@media (max-width: 1024px) {}
+@media (max-width: 1024px) {
+    .faq .flex {
+        flex-direction: column;
+    }
 
-@media (max-width: 768px) {}
+    .faq-text {
+        max-width: 100%;
+        min-width: 100%;
+    }
 
-@media (max-width: 640px) {}
+    .faq-text h2 {
+        font-size: 2.286rem;
+    }
+
+    .podcast {
+        padding: 56px 0;
+    }
+
+    .podcast h2 {
+        font-size: 2.286rem;
+    }
+
+    .accordeeon {
+        max-width: 100%;
+    }
+
+    .reviews {
+        flex-direction: column;
+    }
+
+    .recent-updates-row {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .partners-baner {
+        padding: 22px 24px;
+    }
+
+    .partners-baner .flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .partners-baner .speakers {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .partners-baner ul li:nth-child(1) {
+        --offset: 1;
+        z-index: 2;
+        transform: translateX(0px);
+    }
+
+    .partners-baner ul li:nth-child(2) {
+        --offset: 1;
+        z-index: 2;
+        transform: translateX(-20px);
+    }
+
+    .partners-baner ul li:nth-child(3) {
+        --offset: 2;
+        z-index: 3;
+        transform: translateX(-40px);
+    }
+
+    .partners-baner ul li:nth-child(4) {
+        --offset: 3;
+        z-index: 4;
+        transform: translateX(-60px);
+    }
+
+    .partners-baner ul li:nth-child(5) {
+        --offset: 3;
+        z-index: 5;
+        transform: translateX(-80px);
+    }
+
+    .partners-baner button {
+        display: block;
+        width: 100%;
+    }
+
+
+    .partners .flex {
+        gap: 7px;
+    }
+
+    .partners .partner-block {
+        width: 168px;
+        height: 78px;
+        border-radius: 13px;
+    }
+
+    .partners {
+        padding-bottom: 52px;
+    }
+
+    .join-our-newsletter .banner form {
+        flex-direction: column;
+    }
+
+
+
+}
+
+@media (max-width: 640px) {
+    .faq-text button {
+        width: 100%;
+    }
+}
