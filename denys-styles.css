@@ -363,7 +363,7 @@
 }
 
 .review {
-  flex: 0 0 33.33%;
+
   padding: 20px;
   border-radius: 14px;
   border: 1px solid #571cb433;
@@ -371,8 +371,21 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.review img {
+  margin-bottom: 10px;
+}
+
 .reviews-indicators {
   display: none;
+}
+
+
+
+.review-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--primary-head);
+  margin-top: 8px;
 }
 
 /* join-our-newsletter */
@@ -670,14 +683,12 @@ footer a {
   cursor: pointer;
 }
 
-.step-1 .input-group > div {
+.step-1 .input-group>div {
   width: 50%;
 }
 
 .step-1 select {
-  background: white
-    url('data:image/svg+xml;utf8,<svg fill="%236A6A8B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
-    no-repeat;
+  background: white url('data:image/svg+xml;utf8,<svg fill="%236A6A8B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat;
   background-position: right 12px center;
   background-size: 16px;
   padding-right: 32px;
@@ -799,7 +810,7 @@ footer a {
   transition: all 0.3s ease-in-out;
 }
 
-.custom-checkbox input:checked + .checkmark {
+.custom-checkbox input:checked+.checkmark {
   background-color: var(--primary);
   border-color: var(--primary);
 }
