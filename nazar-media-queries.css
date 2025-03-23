@@ -1,14 +1,263 @@
-@media (max-width: 640px) {
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 1536px) {
 }
 
 @media (max-width: 1280px) {
+  .hero-button-primary,
+  .hero-button-secondary {
+    padding: 14px;
+  }
+
+  .hero-wrapper-info h1 {
+    font-size: 4rem;
+  }
+
+  .hero-wrapper-banner {
+    height: 360px;
+  }
+
+  .hero-wrapper-banner img {
+    right: 0;
+  }
+
+  .speakers-body-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
-@media (max-width: 1536px) {
+@media (max-width: 1024px) {
+  .hero-button-primary,
+  .hero-button-secondary {
+    padding: 14px 24px;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-wrapper-banner {
+    width: 100%;
+    height: 500px;
+  }
+
+  .hero-wrapper-info,
+  .about-wrapper-card,
+  .about-inner-banner img {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .about-wrapper-cards {
+    flex-direction: column;
+  }
+
+  .about-wrapper-inner {
+    flex-direction: column-reverse;
+  }
+
+  .agenda-action-button {
+    padding: 8px 16px;
+  }
+
+  .agenda-steps-inner {
+    flex-direction: column;
+    gap: 56px;
+    margin-bottom: 32px;
+  }
+
+  .agenda-wrapper-body h3 {
+    font-size: 1.714rem;
+  }
+
+  .agenda-wrapper-heading {
+    width: 100%;
+  }
+
+  .speakers.section {
+    margin-top: 0;
+  }
+
+  .header-wrapper-burger {
+    display: flex;
+  }
+
+  .header-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .header-wrapper-logo {
+    width: 80%;
+  }
+
+  .header-wrapper-nav {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-wrapper-info {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 16px;
+  }
+
+  .header-nav-list {
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    opacity: 0;
+    right: 0;
+    top: 128px;
+    height: fit-content;
+    pointer-events: none;
+    transition: 0.5s;
+    background: var(--white);
+    flex-direction: column;
+    padding: 32px 0;
+    z-index: 1000001;
+  }
+
+  .header__mobile_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    position: fixed;
+    top: 0px;
+    left: 0%;
+    right: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    padding: 20px 28px;
+    opacity: 0;
+    z-index: 100;
+    pointer-events: none;
+    transition: 0.5s;
+
+    background: radial-gradient(50% 50% at 50% 50%, #fc98a6 0%, #ef7a82 100%);
+  }
+
+  .header-nav-list.active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .agenda-block-box {
+    gap: 16px;
+  }
+
+  .about-wrapper {
+    gap: 40px;
+  }
+
+  .speakers-body-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers-body-cards {
+    height: 1800px;
+    overflow: hidden;
+  }
+
+  .speakers-more-button {
+    width: 100%;
+  }
+
+  .speakers.section {
+    padding-bottom: 0;
+  }
+
+  .speakers-body-more {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.4976584383753502) 0%,
+      rgba(255, 255, 255, 0.7805716036414566) 15%,
+      rgba(255, 255, 255, 0.9850533963585434) 38%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .newsletter-wrapper-form form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter-wrapper-form form input {
+    padding-left: 8px;
+  }
+
+  .newsletter-popup {
+    padding: 60px 20px;
+  }
+
+  .newsletter-popup-close {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .agenda-box-time {
+    min-width: 68px;
+  }
+
+  .agenda-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .agenda-box-info {
+    padding-bottom: 18px;
+  }
+
+  .about-wrapper-inner {
+    padding: 16px;
+  }
+
+  .about-body-extra {
+    flex-direction: column;
+  }
+
+  .about-wrapper-cards {
+    gap: 16px;
+  }
+
+  .hero-wrapper-banner {
+    max-height: 248px;
+  }
+
+  .hero-wrapper-banner img {
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .hero-wrapper-info h1 {
+    font-size: 2.286rem;
+  }
+
+  .hero-info-actions {
+    flex-direction: column;
+  }
+
+  .hero-button-primary,
+  .hero-button-secondary {
+    width: 100%;
+  }
+
+  .hero-info-actions {
+    margin-top: 16px;
+  }
+
+  .hero-info-extra {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
