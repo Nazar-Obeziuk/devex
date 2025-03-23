@@ -703,7 +703,22 @@ footer a {
 }
 
 .prev-step {
-    background: #6c757d;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--primary);
+    color: #7A59AE;
+    font-weight: 500;
+    max-width: 196px;
+    position: relative;
+}
+
+.prev-step svg {
+    position: absolute;
+    left: 40px;
+    height: 17px;
 }
 
 
@@ -743,7 +758,7 @@ footer a {
     align-items: center;
     gap: 20px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     user-select: none;
 }
 
@@ -763,17 +778,6 @@ footer a {
     border-color: var(--primary);
 }
 
-.custom-checkbox input:checked+.checkmark::after {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 2px;
-    width: 6px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-}
 
 .step-3 textarea {
     width: 100%;
@@ -781,11 +785,24 @@ footer a {
     border: 1px solid #66666659;
     min-height: 200px;
     margin-bottom: 26px;
+    outline: none;
     margin-top: 8px;
+    resize: none;
+    padding: 20px;
 }
 
 .step-3-box {
     display: flex;
     align-items: flex-start;
     gap: 12px;
+}
+
+.step-btns {
+    display: flex;
+    gap: 14px;
+}
+
+.step-3-box a {
+    color: var(--secondary);
+    text-decoration: underline;
 }
