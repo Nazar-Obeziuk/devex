@@ -17,6 +17,9 @@
   --gray: #6f6c6f;
   --section: #faf8fc;
   --primary-head: #2F1656;
+  --light-background: #FAF8FC;
+  --primary-accent: #571CB4;
+  --active-background: #F1EDF7;
   --linear-gradient: linear-gradient(270deg,
       rgba(234, 82, 130, 1) 0%,
       rgba(87, 28, 180, 1) 100%);
