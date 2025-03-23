@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --padding-large: 40px;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.partners-baner-section {
-  margin-top: 40px;
 }
 
 .partners-baner {
@@ -13,11 +17,10 @@
   border-radius: 24px;
   padding: 45px 52px;
   color: var(--white);
-  font-size: 1.143rem;
 }
 
-.partners-baner p {
-  color: var(--white);
+.partners-baner {
+  font-size: 1.143rem;
 }
 
 .partners-baner button {
@@ -103,6 +106,14 @@
   z-index: 5;
 }
 
+.partners-baner h2 {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.partners-baner p {
+  color: var(--white);
+}
+
 /* partners */
 
 .partners {
@@ -159,11 +170,22 @@
 }
 
 .faq-text h2 {
+  line-height: 124%;
   margin-bottom: 15px;
   color: var(--primary-head);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.faq-text button {
+  transition: 0.4s;
+}
+
+.faq-text button:hover {
+  transform: scale(1.05);
 }
 
 .faq p span {
+  display: block;
   font-weight: 500;
   color: var(--secondary);
   font-weight: normal;
@@ -185,11 +207,6 @@
   border-radius: 10px;
   cursor: pointer;
   margin-top: 20px;
-  transition: 0.4s;
-}
-
-.faq-text button:hover {
-  transform: scale(1.05);
 }
 
 .accordeeon {
@@ -206,7 +223,7 @@
 }
 
 .accordion-item.active {
-  background: #f1edf7;
+  background: var(--active-background);
 }
 
 .accordion-item:last-child {
@@ -225,7 +242,7 @@
   border: none;
   cursor: pointer;
   background: none;
-  padding: 19px 20px;
+  padding: var(--padding-medium);
 }
 
 .accordion-indicator {
@@ -237,12 +254,17 @@
   border-radius: 50%;
   background: #faf8fc;
   position: relative;
+  transform: rotate(-90deg);
   transition: 0.4s ease;
 }
 
 .accordion-item.active .accordion-indicator {
   background: var(--primary);
-  transform: rotate(180deg);
+  transform: rotate(0deg);
+}
+
+.accordion-item.active .accordion-indicator svg {
+  transform: translate(-50%, -40%);
 }
 
 .accordion-indicator svg {
@@ -257,7 +279,7 @@
 }
 
 .accordion-item svg path {
-  stroke: #571cb4;
+  stroke: var(--primary-accent);
 }
 
 .accordion-item.active svg path {
@@ -268,12 +290,13 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding: 0 15px;
 }
 
 .accordion-content p {
   color: var(--gray);
+  padding: var(--padding-medium);
   padding-bottom: 20px;
+  padding-top: 0;
 }
 
 /* podcast */
@@ -286,11 +309,14 @@
   border-left: 1px solid #e1deeb;
   padding-left: 14px;
   line-height: 3.143rem;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .podcast p {
   margin-top: 24px;
   margin-bottom: 32px;
+  max-width: 690px;
+  opacity: 0.7;
 }
 
 .podcast img {
@@ -310,6 +336,9 @@
   align-items: center;
   height: 440px;
   margin: 40px 0;
+  font-size: 1.286rem;
+  text-align: center;
+  padding: 0 50px;
   border-radius: 24px;
 }
 
@@ -318,27 +347,32 @@
   border-left: 1px solid #e1deeb;
   padding-left: 14px;
   line-height: 3.143rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.reviews-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .reviews {
   display: flex;
   gap: 22px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .review {
+  flex: 0 0 33.33%;
   padding: 20px;
   border-radius: 14px;
   border: 1px solid #571cb433;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
 }
 
-.review p {
-  margin: 8px 0px;
-}
-
-.review-name {
-  color: var(--primary);
-  font-weight: 500;
-  margin: 0px;
+.reviews-indicators {
+  display: none;
 }
 
 /* join-our-newsletter */
@@ -360,6 +394,16 @@
   padding: 64px 30px;
 }
 
+.join-our-newsletter .banner h2 {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.join-our-newsletter .banner p {
+  max-width: 462px;
+  opacity: 0.7;
+  color: var(--white);
+}
+
 .join-our-newsletter .banner form {
   display: flex;
   padding: 8px;
@@ -374,6 +418,7 @@
   width: 100%;
   height: 52px;
   padding-left: 24px;
+  font-size: 14px;
   border: none;
   outline: none;
 }
@@ -394,10 +439,6 @@
   transform: scale(1.05);
 }
 
-.banner p {
-  color: var(--white);
-}
-
 .recent-updates {
   padding: 80px 0;
 }
@@ -411,6 +452,7 @@
 .recent-updates .title h2 {
   color: var(--primary-head);
   margin-bottom: 15px;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .recent-updates .title p {
@@ -430,6 +472,9 @@
 }
 
 .recent-updates-box h4 {
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+  color: var(--primary-head);
   font-size: 1.286rem;
   margin-bottom: 8px;
   margin-top: 18px;
@@ -450,7 +495,7 @@
   width: 100%;
   height: 240px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 14px;
 }
 
 .recent-updates-box .options p {
@@ -460,6 +505,7 @@
 .recent-updates-box .options a {
   color: var(--secondary);
   font-size: 1.143rem;
+  font-weight: 300;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -486,11 +532,22 @@ footer {
   background: #000;
 }
 
+.footer-links a {
+  opacity: 0.4;
+  text-decoration: underline;
+}
+
 .footer-links .line {
   padding: 0 15px;
 }
 
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 footer .desc {
+  max-width: 823px;
   margin-top: 24px;
   margin-bottom: 64px;
 }
@@ -501,6 +558,276 @@ footer .desc a {
 
 footer a {
   color: #000;
-  margin-bottom: 8px;
   font-weight: 400;
+}
+
+.footer-menu,
+.footer-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+}
+
+.footer-menu-mobile {
+  display: none;
+}
+
+.registration {
+  padding: 44px 0;
+  background: #faf8fc;
+}
+
+.partners-baner-section {
+  margin-top: 56px;
+}
+
+.registration-container {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 24px;
+  margin: 0 auto;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  border: 1px solid var(--primary);
+  border-radius: 500px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.toggle-buttons button {
+  font-family: "Lexend Deca", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: none;
+  font-weight: bold;
+  font-size: 1.429rem;
+  color: var(--primary);
+  cursor: pointer;
+  border-radius: 500px;
+  transition: all 0.3s ease;
+}
+
+.toggle-buttons .active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.registration-title {
+  text-align: center;
+  font-weight: 700;
+  color: var(--primary-head);
+  margin-bottom: 8px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2.286rem;
+}
+
+.registration-subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.form-container {
+  background: var(--white);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-1 .input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.step-1 label {
+  display: block;
+  color: #6f6c6f;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.step-1 input,
+.step-1 select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #66666659;
+  border-radius: 12px;
+  font-size: 14px;
+  background: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.step-1 .input-group > div {
+  width: 50%;
+}
+
+.step-1 select {
+  background: white
+    url('data:image/svg+xml;utf8,<svg fill="%236A6A8B" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')
+    no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 32px;
+}
+
+.next-step {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .steps::before {
+    left: 20%;
+    width: 60%;
+  }
+}
+
+.form-step {
+  display: none;
+}
+
+.active-step {
+  display: block;
+}
+
+.prev-step,
+.submit-form {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 24px;
+}
+
+.prev-step {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  background: var(--white);
+  border: 1px solid var(--primary);
+  color: #7a59ae;
+  font-weight: 500;
+  max-width: 196px;
+  position: relative;
+}
+
+.prev-step svg {
+  position: absolute;
+  left: 40px;
+  height: 17px;
+}
+
+.step-2-box {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #66666659;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.step-2 h4 {
+  margin-top: 24px;
+}
+
+.step-2 input {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.step-2-checkbox-descr {
+  opacity: 0.6;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.step-3 textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #66666659;
+  min-height: 200px;
+  margin-bottom: 26px;
+  outline: none;
+  margin-top: 8px;
+  resize: none;
+  padding: 20px;
+}
+
+.step-3-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-btns {
+  display: flex;
+  gap: 14px;
+}
+
+.step-3-box a {
+  color: var(--secondary);
+  text-decoration: underline;
 }

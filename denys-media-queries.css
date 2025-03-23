@@ -14,20 +14,21 @@
         font-size: 2.286rem;
     }
 
+    .recent-updates .title h2 {
+        font-size: 2.286rem;
+    }
+
     .podcast {
         padding: 56px 0;
     }
 
-    .podcast h2 {
+    .podcast h2,
+    .event h2 {
         font-size: 2.286rem;
     }
 
     .accordeeon {
         max-width: 100%;
-    }
-
-    .reviews {
-        flex-direction: column;
     }
 
     .recent-updates-row {
@@ -83,6 +84,10 @@
         transform: translateX(-80px);
     }
 
+    .partners-baner ul li {
+        transform: translateX(calc(-20px * (5 - var(--offset))));
+    }
+
     .partners-baner button {
         display: block;
         width: 100%;
@@ -100,11 +105,73 @@
     }
 
     .partners {
-        padding-bottom: 52px;
+        padding-bottom: 80px;
     }
 
     .join-our-newsletter .banner form {
         flex-direction: column;
+    }
+
+    .partners h3 {
+        font-size: 1.714rem;
+        font-weight: 600;
+    }
+
+    .event .video {
+        height: 209px;
+    }
+
+    .footer-menu-mobile {
+        display: flex;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 64px;
+    }
+
+    .footer-bottom .line {
+        display: none;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .footer-menu {
+        display: none;
+    }
+
+
+    .reviews {
+        transition: transform 0.3s ease-in-out;
+        gap: 0px;
+    }
+
+    .review {
+        flex: 0 0 100%;
+    }
+
+    .reviews-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .reviews-indicators div {
+        width: 10px;
+        height: 10px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .reviews-indicators div.active {
+        background: var(--primary);
     }
 
 

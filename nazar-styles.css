@@ -116,6 +116,7 @@
   display: flex;
   align-items: center;
   gap: 18px;
+  margin-top: 14px;
 }
 .hero-button-primary {
   padding: 14px 24px;
@@ -197,7 +198,8 @@
   color: var(--black);
 }
 .about-card-text {
-  color: var(--text-black);
+  color: #201d2480;
+  font-weight: 400;
 }
 .about-wrapper-inner {
   background: var(--primary);
@@ -406,8 +408,8 @@
   gap: 8px;
 }
 .agenda-loc-circle {
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   border-radius: 50%;
   background: var(--white);
   border: 5px solid var(--secondary);

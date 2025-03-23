@@ -28,6 +28,15 @@
     rgba(234, 82, 130, 1) 0%,
     rgba(87, 28, 180, 1) 100%
   );
+  --primary-head: #2f1656;
+  --light-background: #faf8fc;
+  --primary-accent: #571cb4;
+  --active-background: #f1edf7;
+  --linear-gradient: linear-gradient(
+    270deg,
+    rgba(234, 82, 130, 1) 0%,
+    rgba(87, 28, 180, 1) 100%
+  );
   --linear-gradient-background: rgb(234, 82, 130);
   --text-black: #020f14b2;
   --purple: #7b4cc4;
@@ -97,17 +106,19 @@ h4 {
   width: 100%;
 }
 
-.wrapper {
-}
 .form-steps {
   display: flex;
+  justify-content: center;
   gap: 72px;
 }
 .form-step-block {
-  width: 80px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+.form-step-block:nth-child(1),
+.form-step-block:nth-child(2) {
+  width: 80px;
 }
 .form-block-circle {
   margin-bottom: 4px;
@@ -140,9 +151,12 @@ h4 {
   top: calc(20px / 2);
   width: 96px;
   height: 2px;
-  background: #571cb4;
+  background: #571cb466;
   left: calc(100% + 14px);
   border-radius: 20px;
+}
+.form-step-text {
+  margin-top: 32px;
 }
 .form-block-number {
   font-size: 0.714rem;
@@ -152,12 +166,14 @@ h4 {
 .form-block-name.active {
   color: #2f1656;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .form-block-name {
   color: #2f165699;
   font-weight: 400;
   line-height: 100%;
+  font-size: 14px;
 }
 
 @media (max-width: 1296px) {
@@ -189,5 +205,9 @@ h4 {
 @media (max-width: 576px) {
   .container {
     width: 100%;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
